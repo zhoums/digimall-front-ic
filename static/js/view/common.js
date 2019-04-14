@@ -121,15 +121,13 @@ define('main/common', ['jquery', 'main/utils', 'main/server', 'main/temple', 'jq
   exports.setPageTitle = function() {
     document.title = document.title + ' - ' + window._c.websiteName;
   };
-  // // 导航栏
-  // exports.siteNav = function(){
-  //     // utils.TPL.loadTemplates(['site_nav'],function(){
-  //     //     var html = utils.TPL.get.call(exports.TPL,'site_nav');
-  //     //     $body.find('#site-nav').html(html);
-  //     // });
-  //     var html = temple.siteNavHtml();
-  //     $body.find('#site-nav').html(html);
-  // };
+  // 导航栏
+  exports.siteNav = function() {
+    utils.TPL.loadTemplates(['site_nav'], function() {
+      var html = utils.TPL.get.call(exports.TPL, 'site_nav');
+      $body.find('#site-nav').html(html);
+    });
+  };
   // 头部
   exports.header = function() {
     var url = window.location.pathname;
@@ -137,7 +135,6 @@ define('main/common', ['jquery', 'main/utils', 'main/server', 'main/temple', 'jq
       url += '?tpl=about_us';
     }
     var $header = $body.find('#header');
-    console.log('$header', $header)
     $header.find('.navTab[href="' + url + '"]').addClass('highlight');
     exports.homeCagtegory();
     utils.TPL.loadTemplates(['header1'], function() {
@@ -156,7 +153,7 @@ define('main/common', ['jquery', 'main/utils', 'main/server', 'main/temple', 'jq
   // Category列表
   exports.homeCagtegory = function() {
     var homeCagtegoryInfo = utils.STORE.getItem('homeCagtegoryInfo');
-    console.log(homeCagtegoryInfo)
+    console.log(homeCagtegoryInfo, 'homeCagtegoryInfo')
     if (homeCagtegoryInfo) {
       homeCagtegoryCbf(homeCagtegoryInfo);
     } else {
@@ -424,7 +421,7 @@ define('main/common', ['jquery', 'main/utils', 'main/server', 'main/temple', 'jq
   exports.init = function(isNeedLogin) {
     isNeedLogin = isNeedLogin || '';
     exports.isLogin(isNeedLogin);
-    // exports.siteNav();
+    exports.siteNav();
     exports.header();
     exports.siteMap();
     exports.footer();
