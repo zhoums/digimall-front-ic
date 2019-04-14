@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Product</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link type="image/x-icon" rel="shortcut icon"   href="/static/img/favicon.png" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=1200">
+<!-- <link rel="stylesheet" href="/static/css/jquery-ui-1.9.2.custom/css/ui-lightness/jquery-ui-1.9.2.custom.min.css"> -->
+<link rel="stylesheet" type="text/css" href="/static/css/common.css">
+<link rel="stylesheet" type="text/css" href="/static/css/detail.css">
+</head>
+<body>
+    <div id="site-nav">
+        <div class="top">
+            <div class="Container pageWidth">  
+                <div class="topSum">
+                    <span style="margin:5px;">Hello! Welcome to RiXin!</span>
+                    <a href="/member/login.html" target="_blank" id="aLogin">Login</a> |        
+                    <a href="/member/register.html" target="_blank" id="aLogout">Register</a>
+                </div>
+                <div class="topMenu">
+                    <div class="item">
+                        <a href="javascript:void(0)" link="/member/index.html" class="Link needLogin">My Account</a>
+                        <ul style="display: none;">
+                            <li><a href="javascript:void(0)" link="/account/index.html" class="needLogin">Account Information</a></li>
+                            <li><a href="javascript:void(0)" link="/account/address.html" class="needLogin">Shipping Address</a></li>
+                            <li><a href="/member/logout.html" class="logout">Logout</a></li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <a href="javascript:void(0)" link="/order/index.html" class="Link needLogin">My Orders</a>
+                        <ul style="display: none;">
+                            <li><a href="javascript:void(0)" link="/order/index.html" class="needLogin">My Orders</a></li>
+                            <li><a href="javascript:void(0)" link="/quote/index.html" class="needLogin">My Inquiry</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="item">
+                        <a href="javascript:void(0)" class="Link">Site Map</a>
+                        <ul style="display: none;">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/brand/index.html">Brand</a></li>
+                            <li><a href="/product/index.html">Product</a></li>
+                            <li><a href="/datasheet/index.html">DataSheet</a></li>
+                        </ul>
+                    </div>
+                    <div class="item lang">
+                        <a class="Link">English</a>
+                    </div>
+                </div>
+                <div class="Clear"></div>
+            </div>
+        </div>
+    </div>
+    <div id="wrapper" class="Container">
+        <header id="header">
+            <div class="pageWidth Container">
+                <div class="Logo"><a href="/"><img src="/static/img/logo.png"></a></div>
+                <div class="headRight">
+                    <div class="searchBox">
+                        <div id="tabSearch" class="searSelect">
+                            <a href="javascript:void(0)" class="sele tabSearch" v="Product">Products</a>
+                            <span>|</span>
+                            <a href="javascript:void(0)" class="tabSearch" v="DataSheet">DataSheet</a>
+                        </div>
+                        <div class="searTxt">
+                            <input type="text" id="searchInput" name="part" placeholder="Enter the keyword you want to find" autocomplete="off" value=""><input type="button" value="Search" class="searchSubmit">
+                        </div>
+                    </div>
+                    <a href="javascript:;" class="quickInquiry"><i class="ci-left"></i>Quick Inquiry</a>
+                    <div class="Clear"></div>
+                </div>
+                <div class="Clear"></div>
+            </div>
+            <div class="navigation">
+                <div class="pageWidth Container">
+                    <div class="nav_Left">
+                        <a class="proCate" href="javascript:;">Categories<i class="arrowIcon down"></i></a>
+                        <a class="navTab" href="/">Home</a>
+                        <a class="navTab" href="/product/index.html">Product Index</a>
+                        <a class="navTab" href="/brand/index.html">Brand Index</a>
+                        <a class="navTab" href="/datasheet/index.html">DataSheet</a>
+                        <a class="navTab" href="/article/about.html?tpl=about_us">About US</a>
+                    </div>
+                    <div class="categoryContainer">
+                        <ul class="categoryList"></ul>
+                    </div>
+                    <div class="Clear"></div>
+                </div>
+                <div class="Clear"></div>  
+            </div>
+        </header>
+        <div id="main">
+            <div class="SiteMap"></div>
+            <h2 class="manufacturer"></h2>
+            <div class="productPic">
+                <div class="large"></div>
+                <div class="small"></div>
+            </div>
+            <div class="productInfo">
+                <dl class="infoList">
+                    <dt><h1></h1></dt>
+                    <dd><label>Quantity Available：</label></dd>
+                    <dd><label>Manufacturer：</label></dd>
+                    <dd><label>Manufacturer Part Number：</label>-</dd>
+                    <dd><label>Description：</label><span></span></dd>
+                    <dd><label>Lead Free Status / RoHS Status：</label>
+                    <dd><label>Manufacturer Standard Lead Time：</label></dd>
+                    <dd><label>Moisture Sensitivity Level (MSL)：</label></dd>
+                    <dd><label>Stock：</label></dd>
+                    <dd><label>DataSheet：</label>-</dd>
+                </dl>
+                <!-- <ul class="infoOther"> -->
+                <div class="countContainer" id="count">
+                    <label>Quantity：</label>
+                    <span class="sub">-</span>
+                    <input type="text" id="txtCount" class="count" size="6" min="1" value="1">
+                    <span class="add">+</span>pcs
+                    <span id="CountPlace">* <b></b>（Unit Price）=  $ <strong></strong>（Total）</span>
+                </div>
+                <div class="addLink">
+                    <a href="javascript:;" class="addCart"><i></i>Add to cart</a>
+                    <a href="javascript:;" class="purchaseBtn"><i></i>Purchase</a>
+                    <a href="javascript:;" class="inquiry"><i></i>Post Inquiry</a>
+                </div>
+                <!-- </ul> -->
+            </div>
+            <div class="proOther">
+                <h3>Extended Price:</h3>
+                <div class="batchPrice">
+                    <ul>
+                        <li class="title">
+                            <label class="count">Quantity</label>
+                            <label class="unitPice">Unit Price</label>
+                            <label>Total Price</label>
+                        </li>
+                        <li>
+                            <ul class="extendedPrice"></ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="Clear"></div>
+            <div class="headline">
+                <i></i>Product Specification
+            </div>
+            <div class="productRow noHistoryContainer">  
+                <table class="productTable" id="prod-att-table" cellspacing="0" cellpadding="0">
+                    <tbody></tbody>
+                </table>
+                <div class="historyContainer">
+                    <h3>Browsing History</h3>
+                    <ul class="historyProduct"></ul>
+                </div>
+            </div>
+            <div class="Clear"></div>
+            <div class="headline">
+                <i></i>Similar Products
+            </div>
+            <div class="fullSlide favorProductWrapper">
+                <div class="bd">
+                    <ul class="favorProductContainer"></ul>
+                </div>
+                <a class="prev" href="javascript:void(0)"></a>
+                <a class="next" href="javascript:void(0)"></a>
+            </div>
+
+            <!-- <div class="favorProductContainer"></div> -->
+            <div class="Clear"></div>
+        </div>
+        <footer id="footer"></footer>
+<!--         <div id="inputBox"  title="Please enter the quantity">
+            <label>Quantity:</label>
+            <input class="quantity" type="text" placeholder="Please enter the quantity"/>
+            <div class="error_msg"></div>
+            <input class="quantityBtn" type="button" value="Submit"/>
+        </div> -->
+        <div id="postInquiry" class="inquiryPopup">
+            <h3><i></i>Post Inquiry</h3>
+            <form id="fileForm" method="post"  enctype="multipart/form-data"  name="inquery">
+                <ul class="postInquiryContainer">
+                    <li>
+                        <label><span>*</span>Name:</label>
+                        <input type="text" id="post_inquiry_name">
+                    </li>
+                    <li>
+                        <label><span>*</span>Email:</label>
+                        <input type="text" id="post_inquiry_email">
+                    </li>
+                    <li>
+                        <label>Target Price:</label>
+                        <input type="text" id="post_inquiry_price" placeholder="USD">
+                    </li>
+                    <li>
+                        <label><span>*</span>Quantity:</label>
+                        <input type="text" id="post_inquiry_quantity">
+                    </li>
+                    <li class="remarkWay">
+                        <label><span>*</span>Remark:</label>
+                        <textarea id="post_inquiry_content"></textarea> 
+                    </li>
+                    <li>
+                        <div class="title">Upload BOM from EXCEL Spreadsheet</div>
+                        <input type="file" id="file" name="file"  enctype="multipart/form-data">
+                    </li>
+                    <li>
+                        <span class="error_msg"></span>
+                    </li>
+                </ul>
+                <div class="inquiryBtn">
+                    <input type="button" value="Submit" class="postInquirySubmit btnPrimary">
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.2/require.min.js"></script>
+    <script src="/static/js/config.js"></script>
+    <script>
+        require([ 'main/product_detail' ], function(page) {
+            page.init();
+        });
+    </script>
+</body>
+<!-- <script src="/static/js/ga.js"></script> -->
+</html>

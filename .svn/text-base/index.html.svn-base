@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Home page</title>
+<link type="image/x-icon" rel="shortcut icon"   href="/static/img/favicon.png" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=1200">
+<link rel="stylesheet" type="text/css" href="static/css/common.css">
+<link rel="stylesheet" type="text/css" href="static/css/index.css">
+</head>
+<body>
+    <div id="site-nav">
+        <div class="top">
+            <div class="Container pageWidth">  
+                <div class="topSum">
+                    <span style="margin:5px;">Hello! Welcome to RiXin!</span>
+                    <a href="/member/login.html" id="aLogin">Login</a> |        
+                    <a href="/member/register.html" id="aLogout">Register</a>
+                </div>
+                <div class="topMenu">
+                    <div class="item">
+                        <a href="javascript:void(0)" link="/member/index.html" class="Link needLogin">My Account</a>
+                        <ul style="display: none;">
+                            <li><a href="javascript:void(0)" link="/account/index.html" class="needLogin">Account Information</a></li>
+                            <li><a href="javascript:void(0)" link="/account/address.html" class="needLogin">Shipping Address</a></li>
+                            <li><a href="/member/logout.html" class="logout">Logout</a></li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <a href="javascript:void(0)" link="/order/index.html" class="Link needLogin">My Orders</a>
+                        <ul style="display: none;">
+                            <li><a href="javascript:void(0)" link="/order/index.html" class="needLogin">My Orders</a></li>
+                            <li><a href="javascript:void(0)" link="/quote/index.html" class="needLogin">My Inquiry</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="item">
+                        <a href="javascript:void(0)" class="Link">Site Map</a>
+                        <ul style="display: none;">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/brand/index.html">Brand</a></li>
+                            <li><a href="/product/index.html">Product</a></li>
+                            <li><a href="/datasheet/index.html">DataSheet</a></li>
+                        </ul>
+                    </div>
+                    <div class="item lang">
+                        <a class="Link">English</a>
+                    </div>
+                </div>
+                <div class="Clear"></div>
+            </div>
+        </div>
+    </div>
+    <div id="wrapper" class="Container">
+        <header id="header">
+            <div class="pageWidth Container">
+                <div class="Logo"><a href="/"><img src="/static/img/logo.png"></a></div>
+                <div class="headRight">
+                    <div class="searchBox">
+                        <div id="tabSearch" class="searSelect">
+                            <a href="javascript:void(0)" class="sele tabSearch" v="Product">Products</a>
+                            <span>|</span>
+                            <a href="javascript:void(0)" class="tabSearch" v="DataSheet">DataSheet</a>
+                        </div>
+                        <div class="searTxt">
+                            <input type="text" id="searchInput" name="part" placeholder="Enter the keyword you want to find" autocomplete="off" value=""><input type="button" value="Search" class="searchSubmit">
+                        </div>
+                    </div>
+                    <a href="javascript:;" class="quickInquiry"><i class="ci-left"></i>Quick Inquiry</a>
+                    <div class="Clear"></div>
+                </div>
+                <div class="Clear"></div>
+            </div>
+            <div class="navigation">
+                <div class="pageWidth Container">
+                    <div class="nav_Left">
+                        <a class="proCate" href="javascript:;">Categories<i class="arrowIcon down"></i></a>
+                        <a class="navTab" href="/">Home</a>
+                        <a class="navTab" href="/product/index.html">Product Index</a>
+                        <a class="navTab" href="/brand/index.html">Brand Index</a>
+                        <a class="navTab" href="/datasheet/index.html">DataSheet</a>
+                        <a class="navTab" href="/article/about.html?tpl=about_us">About US</a>
+                    </div>
+                    <div class="categoryContainer">
+                        <ul class="categoryList"></ul>
+                    </div>
+                    <div class="Clear"></div>
+                </div>
+                <div class="Clear"></div>  
+            </div>
+        </header>
+        <div class="fullSlide bannerWrapper">
+            <div class="bd">
+                <ul class="bannerContainer">
+                    <img src="/static/img/loading.gif"/>
+                </ul>
+            </div>
+            <div class="hd">
+                <ul></ul>
+            </div>
+        </div>
+        <div id="main">
+            <ul class="hotProductViews"></ul>
+            <div class="products">
+                <ul id="tabHead" class="productsChoose"></ul>
+                <div id="tabHeadPanel"></div>
+            </div>
+            <div class="specialProduct">
+                <h2>Special products</h2>
+                <div class="specialProductContainer"></div>
+            </div>
+            <div class="brandOverview">
+                <h2>Global brands
+                    <a class="emphasesColor textLink" href="/brand/index.html">View More &gt</a>
+                </h2>
+                <ul class="brandList"></ul>
+            </div>
+            <div class="policyViews">
+                <h2>Buyer Protection Policy</h2>
+                <ul class="policyList">
+                    <li>
+                        <img src="/static/img/policy/find_products.png" />
+                        <p class="policyTitle">Find Products</p>
+                        <p class="description">Find Products, Inquiry, Receive, Check</p>
+                    </li>
+                    <li>
+                        <img src="/static/img/policy/purchasing_agent.png" />
+                        <p class="policyTitle">Purchasing Agent</p>
+                        <p class="description">Centralized Delivery,  Unified Payment</p>
+                    </li>
+                    <li>
+                        <img src="/static/img/policy/quality_assurance.png" />
+                        <p class="policyTitle">Quality Assurance</p>
+                        <p class="description">All products are 100% guaranteed New & Original</p>
+                    </li>
+                    <li>
+                        <img src="/static/img/policy/fast_delivery.png" />
+                        <p class="policyTitle">Fast Delivery</p>
+                        <p class="description">Over 100,000 products in stock</p>
+                    </li>
+                    <li>
+                        <img src="/static/img/policy/excess_inventory.png" />
+                        <p class="policyTitle">Excess Inventory</p>
+                        <p class="description">Provide Recycling, Consignment Service</p>
+                    </li>
+                    <li>
+                        <img src="/static/img/policy/bom.png" />
+                        <p class="policyTitle">BOM</p>
+                        <p class="description">One-stop Purchasing Solution</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <footer id="footer"></footer>
+        
+    </div>
+    <div style="text-align:center;background:#f7f7f7"><script id="ebsgovicon" src="http://szcert.ebs.org.cn/govicon.js?id=030a4826-1526-4235-bc34-52cf1c8a5e1a&width=36&height=50&type=1" type="text/javascript" charset="utf-8"></script></div>
+<script type="text/javascript" charset="utf-8">
+
+</script>
+    <script src="static/js/vendor/require/require.js"></script>
+    <script src="static/js/config.js?t=3"></script>
+    <script>
+        require([ 'main/index' ], function(page) {
+            page.init();
+        });
+    </script>
+</body>
+<!-- <script src="static/js/ga.js"></script> -->
+</html>
