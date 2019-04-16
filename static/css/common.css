@@ -282,14 +282,14 @@ body {
   float: left;
   height: 59px;
   margin-top: 0;
-  margin-right: 50px;
+  margin-right: 35px;
 }
 #header .Logo img {
   width: 100%;
 }
 #header .proCate {
   float: left;
-  margin-top: 35px;
+  margin-top: 30px;
 }
 #header .proCate a {
   font-weight: bold;
@@ -297,7 +297,7 @@ body {
 }
 #header .headSearch {
   float: left;
-  margin-left: 100px;
+  margin-left: 30px;
 }
 #header .headSearch .searchBox {
   float: left;
@@ -306,7 +306,7 @@ body {
   margin-top: 8px;
 }
 #header .headSearch .searchBox .searTxt input[type=text] {
-  width: 200px;
+  width: 190px;
   padding: 10px 10px 10px 20px;
   height: 18px;
   border: 0;
@@ -393,7 +393,7 @@ body {
   float: left;
   height: 38px;
   line-height: 38px;
-  padding: 10px 12px;
+  padding: 10px 8px;
   text-align: center;
   color: #000;
   border-top-left-radius: 5px;
@@ -608,8 +608,55 @@ body {
 /*Footer start*/
 #footer {
   clear: both;
-  margin-top: 100px;
-  background: #f7f7f7;
+  margin-top: 25px;
+  background: url("/static/img/footer.png") repeat-x;
+  background-color: #f7f7f7;
+}
+#footer .title {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 25px;
+  padding: 20px 0;
+  color: white;
+}
+#footer .content div {
+  line-height: 23px;
+  color: white;
+}
+#footer .content .row {
+  box-sizing: border-box;
+}
+#footer .content .row .col-4 {
+  width: 31%;
+  float: left;
+}
+#footer .content .row .col-4:nth-child(2) {
+  padding: 0 40px;
+}
+#footer .content .row .col-4 .box .box_title {
+  border-top: 3px solid #9D9D9D;
+}
+#footer .content .row .col-4 .box .box_title div {
+  text-align: left;
+  margin-top: 20px !important;
+  color: #F53F00;
+  font-weight: bolder;
+  font-size: 16px;
+}
+#footer .content .row .col-4 .box .box_content .list {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #FAFAFA;
+}
+#footer .contact {
+  margin-top: 20px;
+  background: rgba(225, 59, 0, 0.8);
+}
+#footer .contact .col-4:nth-child(2) .title,
+#footer .contact .col-4:nth-child(3) .title {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
 }
 #footer .footFocus {
   line-height: 45px;
@@ -703,13 +750,12 @@ body {
   right: 0;
 }
 #footer .copyright {
-  line-height: 22px;
-  width: 1200px;
-  margin: 10px auto 0;
-  padding: 10px 0 50px;
+  margin: 20px 0;
+  color: white;
+}
+#footer .copyright div {
   text-align: center;
-  color: #b4b4b4;
-  border-top: 1px solid #e6e6e6;
+  line-height: 30px;
 }
 /*Footer end*/
 .SiteMap {
@@ -720,11 +766,12 @@ body {
 }
 .SiteMap span {
   font-size: 14px;
-  color: #808080;
+  font-weight: bold;
+  color: #2E2E2E;
 }
 .SiteMap a {
   font-size: 14px;
-  color: #000;
+  color: #808080;
 }
 .SiteMap a:hover {
   text-decoration: underline;

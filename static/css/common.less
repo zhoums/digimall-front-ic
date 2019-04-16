@@ -349,7 +349,7 @@ body {
     float: left;
     height: 59px;
     margin-top: 0;
-    margin-right: 50px;
+    margin-right: 35px;
     // margin-left: 10px;
     img {
       width: 100%;
@@ -358,7 +358,7 @@ body {
 
   .proCate {
     float: left;
-    margin-top: 35px;
+    margin-top: 30px;
 
     a {
       font-weight: bold;
@@ -368,7 +368,7 @@ body {
 
   .headSearch {
     float: left;
-    margin-left: 100px;
+    margin-left: 30px;
 
     .searchBox {
       float: left;
@@ -377,7 +377,7 @@ body {
         margin-top: 8px;
 
         input[type=text] {
-          width: 200px;
+          width: 190px;
           padding: 10px 10px 10px 20px;
           height: 18px;
           border: 0;
@@ -600,7 +600,7 @@ body {
       float: left;
       height: 38px;
       line-height: 38px;
-      padding: 10px 12px;
+      padding: 10px 8px;
       text-align: center;
       color: #000;
       border-top-left-radius: 5px;
@@ -847,8 +847,69 @@ body {
 /*Footer start*/
 #footer {
   clear: both;
-  margin-top: 100px;
-  background: #f7f7f7;
+  margin-top: 25px;
+  background: url("/static/img/footer.png") repeat-x;
+  background-color: #f7f7f7;
+
+  .title {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 25px;
+    padding: 20px 0;
+    color: white;
+  }
+
+  .content {
+    div {
+      line-height: 23px;
+      color: white;
+    }
+
+    .row {
+      box-sizing: border-box;
+
+      .col-4 {
+        width: 31%;
+        float: left;
+
+        &:nth-child(2) {
+          padding: 0 40px;
+        }
+
+        .box {
+          .box_title {
+            border-top: 3px solid #9D9D9D;
+
+            div {
+              text-align: left;
+              margin-top: 20px !important;
+              color: #F53F00;
+              font-weight: bolder;
+              font-size: 16px;
+            }
+          }
+
+          .box_content .list {
+            font-size: 14px;
+            margin-top: 10px;
+            color: #FAFAFA;
+          }
+        }
+      }
+    }
+  }
+
+  .contact {
+    margin-top: 20px;
+    background: rgba(225, 59, 0, 0.8);
+
+    .col-4:nth-child(2) .title,
+    .col-4:nth-child(3) .title {
+      font-size: 18px;
+      font-weight: bold;
+      text-align: left;
+    }
+  }
 
   .footFocus {
     line-height: 45px;
@@ -989,13 +1050,20 @@ body {
   }
 
   .copyright {
-    line-height: 22px;
-    width: @pageWidth;
-    margin: 10px auto 0;
-    padding: 10px 0 50px;
-    text-align: center;
-    color: #b4b4b4;
-    border-top: 1px solid @borderColor;
+    margin: 20px 0;
+    color: white;
+
+    div {
+      text-align: center;
+      line-height: 30px;
+    }
+    // line-height: 22px;
+    // width: @pageWidth;
+    // margin: 10px auto 0;
+    // padding: 10px 0 50px;
+    // text-align: center;
+    // color: #b4b4b4;
+    // border-top: 1px solid @borderColor;
   }
   // .copyright .FootPic {
   //     margin: 10px 0px;
@@ -1016,13 +1084,14 @@ body {
 
   span {
     font-size: 14px;
-    color: #808080;
+    font-weight: bold;
+    color: #2E2E2E;
   }
 
   a {
     // margin:0px 10px;
     font-size: 14px;
-    color: #000;
+    color: #808080;
 
     &:hover {
       text-decoration: underline;
