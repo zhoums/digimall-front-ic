@@ -370,7 +370,7 @@ define('main/common', ['jquery', 'main/utils', 'main/server', 'main/temple', 'jq
         index = self.index('.tabSearch');
         self.addClass('sele').siblings('a').removeClass('sele');
       } else if (self.hasClass('searchSubmit')) { //提交搜索
-        var searchType = $body.find('.sele').attr('v');
+        var searchType = $body.find(':radio[name="type"]:checked').attr('value');
         var searchValue = $body.find('#searchInput').val();
         if (searchValue.length <= 3) {
           utils.tips('Key words need to be more precise!');
