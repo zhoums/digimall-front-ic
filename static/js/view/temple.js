@@ -511,10 +511,10 @@ define('main/temple', ['jquery', 'main/utils', 'main/base64'], function($, utils
         if (k2 === 0) {
           html +=
             '<div class="pl_info">' +
-            '<a href="/product/detail.html?id=' + v2.productId + '&part=' + v2.sku + '" class="pic"><img src="' + (v2.mfrLogo || '/static/img/default_pic.png') + '" style="max-width:100%;max-height:100%;"></a>' +
+            // '<a href="/product/detail.html?id=' + v2.productId + '&part=' + v2.sku + '" class="pic"><img src="' + (v2.mfrLogo || '/static/img/default_pic.png') + '" style="max-width:100%;max-height:100%;"></a>' +
             '<ul class="info">' +
-            '<li><b>Manufacturer:</b>  ' + v2.manufacturer + '</li>' +
             '<li><strong><a href="/product/detail.html?id=' + v2.productId + '&part=' + v2.sku + '" class="textLink">' + v2.sku + '</a></strong></li>' +
+            '<li><b>Manufacturer:</b>  ' + v2.manufacturer + '</li>' +
             '<li><b>Description</b>:<span class="desc">' + v2.description + '</span></li>' +
             '</ul>' +
             '</div>';

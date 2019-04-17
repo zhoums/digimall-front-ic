@@ -34,7 +34,7 @@
   margin-right: 0;
 }
 .productPic .small .imgChoose img {
-  border: 1px solid #183761;
+  border: 1px solid #ea3e00;
 }
 .productInfo {
   float: left;
@@ -56,7 +56,7 @@
 }
 .infoList dd a {
   text-decoration: underline;
-  color: #183761;
+  color: #ea3e00;
 }
 .infoList label {
   display: inline-block;
@@ -198,7 +198,7 @@ h2 {
   padding: 5px 10px;
   color: #fff;
   border: 1px solid #e6e6e6;
-  background-color: #183761;
+  background-color: #ea3e00;
 }
 .batchPrice {
   border: 1px solid #e6e6e6;

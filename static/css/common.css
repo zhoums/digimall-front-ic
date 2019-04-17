@@ -282,7 +282,7 @@ body {
   float: left;
   height: 59px;
   margin-top: 0;
-  margin-right: 35px;
+  margin-right: 50px;
 }
 #header .Logo img {
   width: 100%;
@@ -297,7 +297,7 @@ body {
 }
 #header .headSearch {
   float: left;
-  margin-left: 30px;
+  margin-left: 100px;
 }
 #header .headSearch .searchBox {
   float: left;
@@ -761,7 +761,7 @@ body {
 .SiteMap {
   line-height: 24px;
   height: 24px;
-  margin: 15px 0 8px;
+  margin: 15px 0 25px;
   color: #808080;
 }
 .SiteMap span {

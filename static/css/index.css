@@ -4,7 +4,7 @@ h2 {
   line-height: 44px;
   height: 44px;
   padding-left: 10px;
-  color: #183761;
+  color: #ea3e00;
 }
 .bannerWrapper {
   overflow: hidden;
@@ -84,7 +84,7 @@ h2 {
   color: #555555;
 }
 .hotProductViews .hotProductInfo .hotProductCategory {
-  color: #183761;
+  color: #ea3e00;
 }
 .hotProductViews .hotProductInfo .viewMore {
   position: absolute;
@@ -141,8 +141,8 @@ h2 {
   margin-right: 0;
 }
 .productsChoose .tabSelect {
-  color: #183761;
-  border-bottom: 2px solid #183761;
+  color: #ea3e00;
+  border-bottom: 2px solid #ea3e00;
   background: url(/static/img/sele_ico.png) no-repeat 50% 36px;
 }
 .productItem {
@@ -224,7 +224,7 @@ h2 {
   overflow: hidden;
   width: 185px;
   height: 30px;
-  color: #183761;
+  color: #ea3e00;
 }
 .specialProduct a:hover {
   text-decoration: underline;
@@ -294,7 +294,7 @@ h2 {
 }
 .policyViews li .policyTitle {
   font-size: 16px;
-  color: #183761;
+  color: #ea3e00;
 }
 .policyViews li .description {
   margin-top: 8px;

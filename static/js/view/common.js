@@ -10,6 +10,26 @@ define('main/common', ['jquery', 'main/utils', 'main/server', 'main/temple', 'jq
     rExpEmail = /^([a-zA-Z0-9]+[_|\_|\.-]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/,
     isSend = false;
 
+  console.log(location.pathname.split('/'));
+
+  function setMenuCurrent() {
+    let pathname = location.pathname.split('/')[1];
+    console.log('pathname', pathname)
+    let menuFlag = ['product', 'brand', 'datasheet', 'article']
+    $("#header .navTab").removeClass('a_hover');
+    if (pathname == menuFlag[0]) {
+      $("#header .navTab:contains('PRODUCT INDEX')").addClass('a_hover');
+    } else if (pathname == menuFlag[1]) {
+      $("#header .navTab:contains('BRAND INDEX')").addClass('a_hover');
+    } else if (pathname == menuFlag[2]) {
+      $("#header .navTab:contains('NEWS')").addClass('a_hover');
+    } else if (pathname == menuFlag[3]) {
+      $("#header .navTab:contains('ABOUT US')").addClass('a_hover');
+    } else {
+      $("#header .navTab:contains('HOME')").addClass('a_hover');
+    }
+  }
+
   function quickInquiry() {
     var $name = $body.find('#quick_inquiry_name');
     var $email = $body.find('#quick_inquiry_email');
@@ -87,7 +107,8 @@ define('main/common', ['jquery', 'main/utils', 'main/server', 'main/temple', 'jq
   // }
   //渲染购物车样式
   function setHeadShopCart(data) {
-    $body.find('.floatWrapper .shop_cart span').html(data.length);
+    $body.find('#site-nav .topRight').eq(0).find('.item').eq(1).find('a').eq(0).html("CART(" + data.length + ")");
+    // $body.find('.floatWrapper .shop_cart span').html(data.length);
     if (data.length) { //头部购物车样式
       $body.find('#ShoppingCart').html(temple.headShopCart(data));
       $body.find('.Cart .shopCartCount').html(data.length);
@@ -428,6 +449,7 @@ define('main/common', ['jquery', 'main/utils', 'main/server', 'main/temple', 'jq
     exports.setPageTitle();
     exports.action();
     bindKeyEvent();
+    setTimeout(setMenuCurrent, 20);
   };
 
   return exports;

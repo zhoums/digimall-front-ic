@@ -1,8 +1,8 @@
 .Container #main {
   min-height: 100px;
 }
-.searchResultContainer,
-.inquiryContainer {
+.inquiryContainer,
+.searchResultContainer {
   display: none;
 }
 .SearchResults .sr_tips {
@@ -29,33 +29,31 @@
   font-size: 16px;
   margin: 0;
 }
-.SearchResults .typeItem,
-.SearchResults .filterItem {
+.SearchResults .filterItem,
+.SearchResults .typeItem {
   line-height: 28px;
   padding: 10px 10px 10px 20px;
-  border: 1px solid #e6e6e6;
-  background-color: #f9f9f9;
 }
-.SearchResults .typeItem b,
-.SearchResults .filterItem b {
+.SearchResults .filterItem b,
+.SearchResults .typeItem b {
   display: inline-block;
   width: 100px;
   vertical-align: top;
-  color: #183761;
+  color: #ea3e00;
 }
-.SearchResults .typeItem .itemContainer,
-.SearchResults .filterItem .itemContainer {
+.SearchResults .filterItem .itemContainer,
+.SearchResults .typeItem .itemContainer {
   display: inline-block;
   width: 1060px;
 }
-.SearchResults .typeItem a,
-.SearchResults .filterItem a {
+.SearchResults .filterItem a,
+.SearchResults .typeItem a {
   font-size: 12px;
   margin-right: 16px;
   color: #333;
 }
-.SearchResults .typeItem a:hover,
-.SearchResults .filterItem a:hover {
+.SearchResults .filterItem a:hover,
+.SearchResults .typeItem a:hover {
   text-decoration: underline;
   color: #d73c38;
 }
@@ -129,7 +127,7 @@
 }
 .price .morep {
   padding-left: 15px;
-  background: url('/static/img/tree.png') -16px 5px no-repeat;
+  background: url("/static/img/tree.png") -16px 5px no-repeat;
 }
 /*proInfoTitle span,proInfoItem li ¿í¶È*/
 .morePro {
@@ -141,11 +139,12 @@
 }
 /*productList sec*/
 .productList {
-  margin: 20px 0;
-  padding-top: 5px;
-  border: 1px solid #eee;
-  border-top: 2px solid #183761;
-  background-color: #f9f9f9;
+  border-top: 3px solid #CACACA;
+  border-left: 1px solid #CACACA;
+  border-right: 1px solid #CACACA;
+  border-bottom: 1px solid #CACACA;
+  border-radius: 5px;
+  margin-top: 20px;
 }
 .productList .pl_info {
   float: left;
@@ -162,9 +161,10 @@
 }
 .productList .pl_info .info {
   line-height: 24px;
+  margin-left: 20px;
 }
-.productList .pl_info .info a {
-  color: #183761;
+.productList .pl_info .info b {
+  font-size: 16px;
 }
 .productList .pl_info .info strong a {
   font-size: 20px;
@@ -194,14 +194,14 @@
   width: 80px;
   margin-left: 10px;
   text-decoration: underline;
-  color: #183761;
+  color: #ea3e00;
 }
 .downloadDatasheet {
   display: inline-block;
   width: 36px;
   height: 40px;
   vertical-align: middle;
-  background: url(/static/img/pdf.png) no-repeat;
+  background: url("/static/img/pdf.png") no-repeat;
 }
 .downloadDatasheet:hover {
   border: 1px solid #ccc;
@@ -255,10 +255,10 @@
   margin-right: 5px;
 }
 .pi_list .price .morePrice i {
-  background: url('/static/img/tree.png') 0 1px no-repeat;
+  background: url("/static/img/tree.png") 0 1px no-repeat;
 }
 .pi_list .price .lessPrice i {
-  background: url('/static/img/tree.png') -17px 1px no-repeat;
+  background: url("/static/img/tree.png") -17px 1px no-repeat;
 }
 .pi_list .operate {
   width: 150px;
@@ -297,19 +297,23 @@
   text-align: left;
 }
 .listTitle {
-  padding: 4px 0;
+  padding: 10px 0;
+  line-height: 40px;
+  height: 40px;
+  margin-top: 20px;
   border-top: 1px solid #eee;
-  background-color: #fff;
+  background-color: #F5F5F5;
+  border-bottom: 2px solid #E93E00;
 }
 .listTitle span {
   font-weight: bold;
-  color: #183761;
+  color: #ea3e00;
 }
 .colorItem {
   background-color: #fff;
 }
 .ShowMore {
-  padding: 10px 0 15px 0;
+  padding: 10px 0 15px;
   text-align: center;
   border-bottom: 1px dotted #ccc;
   background-color: #fff;
@@ -357,10 +361,10 @@ a.btnInquiry {
 .fixTop .Header {
   padding: 0;
 }
-.fixTop .searchBox,
+.fixTop .Header .Logo,
 .fixTop .Inquiry,
-.fixTop .shopCart,
-.fixTop .Header .Logo {
+.fixTop .searchBox,
+.fixTop .shopCart {
   margin-top: 20px;
 }
 #inputBox {
